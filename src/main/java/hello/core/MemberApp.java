@@ -5,6 +5,9 @@ import hello.core.member.Member;
 import hello.core.member.MemberService;
 import hello.core.member.MemberServiceImpl;
 
+/**
+ * 회원 테스트
+ */
 public class MemberApp {
 
     public static void main(String[] args) {
