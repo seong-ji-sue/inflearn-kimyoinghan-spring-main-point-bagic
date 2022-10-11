@@ -12,8 +12,9 @@ public class MemberApp {
 
     public static void main(String[] args) {
 
-        //메인을 실행시켜서 콘솔에 확인하는 한계 -> JUnit
-        MemberService memberService = new MemberServiceImpl();
+        AppConfig appConfig = new AppConfig();
+        MemberService memberService = appConfig.memberService();
+
         Member member = new Member(1L, "memberA", Gradle.VIP);
         memberService.join(member);
 
