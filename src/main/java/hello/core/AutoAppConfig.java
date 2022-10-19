@@ -22,10 +22,10 @@ import org.springframework.context.annotation.FilterType;
 )
 public class AutoAppConfig {
 
-    // 수동 빈등록과 자동 빈 등록 충돌할 때 예시 상황을 하기 위한 코드입니다.
-    // 수동 빈이 우선권을 갖습니다.
-    @Bean(name="memoryMemberRepository")
-    MemberRepository memberRepository() {
-        return new MemoryMemberRepository();
-    }
+//    // 수동 빈등록과 자동 빈 등록 충돌할 때 예시 상황을 하기 위한 코드입니다.
+//    // 수동 빈이 우선권을 갖습니다.
+//    @Bean(name="memoryMemberRepository")
+//    MemberRepository memberRepository() {
+//        return new MemoryMemberRepository();
+//    }
 }
