@@ -48,7 +48,7 @@ public class ApplicationContextBasicFindTest {
     @Test
     @DisplayName("빈 이름으로 조회X")
     void findBeanByNameX() {
-        MemberService xxxxx = ac.getBean("xxxxx", MemberService.class);
+//        MemberService xxxxx = ac.getBean("xxxxx", MemberService.class);
         //두번째 인자의 코드가 첫번째 인자의 에러가 나와야지 성공
         assertThrows(NoSuchBeanDefinitionException.class,
                 () -> ac.getBean("xxxxx", MemberService.class));
