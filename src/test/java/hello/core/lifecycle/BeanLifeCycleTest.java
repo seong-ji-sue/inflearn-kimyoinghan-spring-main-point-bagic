@@ -20,7 +20,7 @@ public class BeanLifeCycleTest {
 
     @Configuration
     static class LifeCycleConfig {
-        @Bean
+        @Bean(initMethod = "init", destroyMethod = "close")
         public NetworkClient networkClient() {
             NetworkClient networkClient = new NetworkClient();//빈 등록시 생성자 먼저 호출
             networkClient.setUrl("http://hello-spring.dev");//수정자를 통해 url이 들어옴

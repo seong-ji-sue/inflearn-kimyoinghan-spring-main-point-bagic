@@ -3,9 +3,7 @@ package hello.core.lifecycle;
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
 
-public class NetworkClient implements InitializingBean, DisposableBean {
-//InitializingBean 초기화
-    //종료
+public class NetworkClient {
     private String url;
 //초기화 작업은 의존관계 주입이 모두 완료되고 난 다음에 호출해야 한다.
     public  NetworkClient() {
@@ -33,18 +31,16 @@ public class NetworkClient implements InitializingBean, DisposableBean {
     }
 
     //의존 관계 주입이 끝나면 호출
-    @Override
-    public void afterPropertiesSet() throws Exception {
-        System.out.println("NetworkClient.afterPropertiesSet");
+    public void init()  {
+        System.out.println("NetworkClient.init");
         connect();
         call("최화 연결 메세지");
 
     }
 
     //빈이 종료될 때 호출
-    @Override
-    public void destroy() throws Exception {
-        System.out.println("NetworkClient.destroy");
+    public void close()  {
+        System.out.println("NetworkClient.close");
         disconnect();
     }
 }
