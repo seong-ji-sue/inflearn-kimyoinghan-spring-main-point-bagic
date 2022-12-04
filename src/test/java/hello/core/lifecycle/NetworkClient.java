@@ -3,6 +3,9 @@ package hello.core.lifecycle;
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
 public class NetworkClient {
     private String url;
 //초기화 작업은 의존관계 주입이 모두 완료되고 난 다음에 호출해야 한다.
@@ -31,6 +34,7 @@ public class NetworkClient {
     }
 
     //의존 관계 주입이 끝나면 호출
+    @PostConstruct
     public void init()  {
         System.out.println("NetworkClient.init");
         connect();
@@ -39,6 +43,7 @@ public class NetworkClient {
     }
 
     //빈이 종료될 때 호출
+    @PreDestroy
     public void close()  {
         System.out.println("NetworkClient.close");
         disconnect();
