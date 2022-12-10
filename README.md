@@ -14,7 +14,9 @@ Optional, List, Interface 등 내용이 나옵니다.
 <br>
 <aside>
 
+[강의 링크](https://www.inflearn.com/course/%EC%8A%A4%ED%94%84%EB%A7%81-%ED%95%B5%EC%8B%AC-%EC%9B%90%EB%A6%AC-%EA%B8%B0%EB%B3%B8%ED%8E%B8/dashboard)
 
+[노션링크](https://typical-wallet-2b3.notion.site/inflearn-e81b6f2567c140c38ae901762d1a5919)
 
 ## Summary
 
